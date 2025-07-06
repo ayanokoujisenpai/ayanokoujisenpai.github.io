@@ -1,0 +1,162 @@
+@font-face {
+    font-family: cooper;
+    src: url('assets/fonts/LLCOOPER.TTF');
+}
+
+@font-face {
+    font-family: bright-aura;
+    src: url('assets/fonts/Bright\ Aura.ttf');
+}
+
+:root {
+    --nav-height: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'bright-aura';
+    color: white;
+}
+
+body {
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    max-height: 100vh;
+}
+
+#home img {
+    width: 40%;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    animation: appear ease-in-out 0.75s;
+}
+
+#home div {
+    text-align: center;
+    background-color: #5c6faf99;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    scale: 0;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+#services {
+    background-color: #5c6faf99;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#scammers {
+    text-align: center;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-image: linear-gradient(blue, darkslateblue);
+}
+
+section {
+    padding: 1rem;
+    min-height: calc(100vh - var(--nav-height));
+    flex-direction: column;
+    padding-bottom: calc(1rem + var(--nav-height));
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+    .tab {
+        padding: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tab:hover{
+        cursor: pointer;
+        opacity: 0.9;
+        background-color: #5c6faf99;
+    }
+
+    .tab.active{
+        color: yellowgreen;
+    }
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content]{
+    display: flex;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table * {
+    color: black;
+    background-color: #5c6faf99;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

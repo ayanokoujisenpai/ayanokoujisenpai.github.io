@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayano Kouji's Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <section class="active" id="home" data-tab-content>
+            <img src="assets/ayanokouji.png" alt="My Picture">
+            <div>
+                <h2>Hi. Kouji here 🥱</h2>
+                <p>Just a boring but legit seller</p>
+                <br>
+                <p>I made this prototype website so feel free to explore around :)</p>
+                
+            </div>
+        </section>
+        <section id="services" data-tab-content>
+            <h4>Services coming soon</h4>
+        </section>
+        <section id="scammers" data-tab-content>
+            <h2>Scammers 🥱</h2>
+            <input type="text" id="search" placeholder="Search by name or number...">
+            <table id="scammerTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <nav>
+            <ul class="tabs">
+                <li class="tab active" data-tab-target="#home">Home</li>
+                <li class="tab" data-tab-target="#services">Services</li>
+                <li class="tab" data-tab-target="#scammers">Scammers</li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
