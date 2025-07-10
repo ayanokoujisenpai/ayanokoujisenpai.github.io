@@ -1,6 +1,6 @@
 @font-face {
-    font-family: cooper;
-    src: url('assets/fonts/LLCOOPER.TTF');
+    font-family: kind-daily;
+    src: url('assets/fonts/Kind\ Daily.ttf');
 }
 
 @font-face {
@@ -16,8 +16,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'bright-aura';
-    color: white;
+    font-family: 'kind-daily';
+    color: #eee;
 }
 
 body {
@@ -33,6 +33,27 @@ body {
     max-height: 100vh;
 }
 
+.card {
+    background-color: #5c6faf99;
+    backdrop-filter: blur(1px);
+    border-radius: 1rem;
+    padding: 1rem;
+    scale: 0;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    margin-bottom: 1rem;
+}
+
+#home {
+    text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px  1px 0 black,
+            1px  1px 0 black;
+}
+
 #home img {
     width: 40%;
     max-width: 300px;
@@ -41,26 +62,17 @@ body {
     animation: appear ease-in-out 0.75s;
 }
 
-#home div {
+#home .card {
     text-align: center;
-    background-color: #5c6faf99;
-    border-radius: 1rem;
-    padding: 0.5rem;
-    scale: 0;
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
     animation-delay: 0.5s;
-    margin-bottom: 1rem;
 }
 
 #services {
-    margin: 0.5rem;
     animation-name: appear;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    letter-spacing: 0.05rem;
     text-shadow:
             -1px -1px 0 black,
             1px -1px 0 black,
@@ -68,23 +80,9 @@ body {
             1px  1px 0 black;
 }
 
-    #services h2 {
-        font-size: 1.25rem;
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    .service {
-        background-color: #5c6fafdd;
-        padding: 1rem;
-    }
-
 #scammers {
     text-align: center;
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: appear 0.5s ease-in-out;
 }
 
 nav {
