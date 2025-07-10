@@ -80,10 +80,23 @@ body {
             1px  1px 0 black;
 }
 
+    #services h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
 #scammers {
     text-align: center;
     animation: appear 0.5s ease-in-out;
 }
+
+    #scammers h2 {
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px  1px 0 black,
+            1px  1px 0 black;
+    }
 
 nav {
     position: fixed;
