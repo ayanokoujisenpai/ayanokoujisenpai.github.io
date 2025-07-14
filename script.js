@@ -1,3 +1,14 @@
+const bgImage = new Image();
+bgImage.src = 'assets/background.png';
+
+bgImage.onload = () => {
+    document.body.style.visibility = 'visible';
+
+    document.querySelectorAll('.card, #home img, #services, #scammers').forEach(el => {
+        el.style.animationPlayState = 'running';
+    });
+};
+
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabsContent = document.querySelectorAll('[data-tab-content]');
 

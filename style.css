@@ -21,12 +21,20 @@
 }
 
 body {
-    background-image: url('assets/background.png');
+    /* background-image: url('assets/background.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
     width: 100%;
+    visibility: hidden;
+}
+
+.card,
+#home img,
+#services,
+#scammers {
+    animation-play-state: paused;
 }
 
 #container {
