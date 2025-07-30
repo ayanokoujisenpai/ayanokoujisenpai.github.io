@@ -8,6 +8,13 @@
 </head>
 <body>
     <div id="container">
+        <nav>
+            <ul class="tabs">
+                <li class="tab active" data-tab-target="#home">Home</li>
+                <li class="tab" data-tab-target="#services">Services</li>
+                <li class="tab" data-tab-target="#scammers">Scammers</li>
+            </ul>
+        </nav>
         <section class="active" id="home" data-tab-content>
             <!-- <img id="herimg" src="assets/saji.jfif" alt="Her Picture">
             <div class="card">
@@ -26,32 +33,31 @@
             </div>
         </section>
         <section class="" id="services" data-tab-content>
-            <h2>Services 😗</h2>
-            <div class="service card">
+            <!-- <h2>Services</h2> -->
+            <!-- <div class="service card">
                 <h4>💻 Basic Website Creation</h4>
                 <h6>I’ll teach you how to build your own website using HTML, CSS & JavaScript — perfect for students or beginners!</h6>
-            </div>
-            <div class="service card">
+            </div> -->
+            <!-- <div class="service card">
                 <h4>🎨 Layout Services</h4>
                 <h6>Custom posters, business menus, tarpaulins, birthday layouts & more!</h6>
-            </div>
+            </div> -->
 
             <div class="service card">
                 <h4>🛒 Online Transaction</h4>
                 <h6>Under 18 or no payment method? I can help you buy digital items, top-ups, or e-load safely (with proof and small fee)</h6>
             </div>
             <div class="service card">
-                <h4>🎮 Gaming Companion Service</h4>
-                <h6>Looking for someone to duo with or just chill in ranked/classic?</h6>
+                <h4>🛡️ Middleman Services</h4>
+                <h6>Need a trusted middleman for your trades? I ensure secure, scam-free deals between both parties. Fast, fair, and reliable. 🔒</h6>
             </div>
-
             <div class="service card">
                 <h4>💰 (Soon) Trading Services</h4>
                 <h6>Considering offering trading help (crypto or items) – still finalizing safe and legit options. Stay tuned! 🕵️‍♂️</h6>
             </div>
         </section>
         <section id="scammers" data-tab-content>
-            <h2>Scammers 😪</h2>
+            <!-- <h2>Scammers</h2> -->
             <input type="text" id="search" placeholder="Search by name or number...">
             <table id="scammerTable">
                 <thead>
@@ -64,15 +70,7 @@
                 <tbody></tbody>
             </table>
         </section>
-        <nav>
-            <ul class="tabs">
-                <li class="tab active" data-tab-target="#home">Home</li>
-                <li class="tab" data-tab-target="#services">Services</li>
-                <li class="tab" data-tab-target="#scammers">Scammers</li>
-            </ul>
-        </nav>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
