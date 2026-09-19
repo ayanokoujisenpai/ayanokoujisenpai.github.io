@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayano Kouji | Number Check &amp; Inquiries</title>
+    <meta
+      name="description"
+      content="Personal page of Ayano Kouji. Check a number against my own documented transactions and send inquiries."
+    />
+    <meta name="theme-color" content="#1f2fbf" />
+
+    <!-- Link previews (Facebook, Messenger, Discord, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ayano Kouji" />
+    <meta
+      property="og:description"
+      content="Check a number against my own documented transactions and send inquiries."
+    />
+    <meta
+      property="og:image"
+      content="https://ayanokoujisenpai.github.io/assets/ayanokouji.png"
+    />
+    <meta property="og:url" content="https://ayanokoujisenpai.github.io/" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="assets/ayanokouji.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/Kind%20Daily.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Order matters: data.js defines SALT, ITERATIONS and REPORTS for script.js -->
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- Without JavaScript the tabs can't switch and the check can't run -->
+    <noscript>
+      <style>
+        .tabs {
+          display: none;
+        }
+        .panel[hidden] {
+          display: flex !important;
+          min-height: 0;
+        }
+        .check-form {
+          display: none;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <div id="container">
+      <header class="topbar">
+        <div class="tabs" role="tablist" aria-label="Site sections">
+          <button
+            class="tab"
+            role="tab"
+            type="button"
+            id="tab-home"
+            aria-controls="home"
+            aria-selected="true"
+          >
+            Home
+          </button>
+          <button
+            class="tab"
+            role="tab"
+            type="button"
+            id="tab-services"
+            aria-controls="services"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Services
+          </button>
+          <button
+            class="tab"
+            role="tab"
+            type="button"
+            id="tab-check"
+            aria-controls="check"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Number check
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- HOME -->
+        <section
+          class="panel"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="tab-home"
+          tabindex="0"
+        >
+          <img
+            class="avatar"
+            src="assets/ayanokouji.png"
+            alt="Ayano Kouji avatar"
+            decoding="async"
+          />
+          <div class="card home-card">
+            <h1>Hi. Kouji here 🥱</h1>
+            <p>Just a nobody</p>
+            <p>Feel free to explore around</p>
+            <p data-contact-wrap hidden>
+              <a data-contact href="#" target="_blank" rel="noopener noreferrer"
+                >Message me</a
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section
+          class="panel"
+          id="services"
+          role="tabpanel"
+          aria-labelledby="tab-services"
+          tabindex="0"
+          hidden
+        >
+          <div class="card">
+            <h2>🧪 Stay tuned!</h2>
+            <p>
+              I am in the lab cooking something to serve. Hope this isn't
+              overcooked. Feel free to reach me out if you have an inquiry 🙂
+            </p>
+            <p>I can be a middleman. Just suggesting 🥱</p>
+            <p data-contact-wrap hidden>
+              <a data-contact href="#" target="_blank" rel="noopener noreferrer"
+                >Send an inquiry</a
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- NUMBER CHECK -->
+        <section
+          class="panel"
+          id="check"
+          role="tabpanel"
+          aria-labelledby="tab-check"
+          tabindex="0"
+          hidden
+        >
+          <h2 class="panel-title">Check a number</h2>
+
+          <div class="card notice">
+            <p>
+              This checks a number against my own records: transactions where I
+              personally paid and did not receive what I paid for.
+            </p>
+            <p>
+              <strong>No result is not a safety check.</strong> Always do your
+              own research before paying anyone.
+            </p>
+            <p data-contact-wrap hidden>
+              Something wrong, or the number changed hands?
+              <a data-contact href="#" target="_blank" rel="noopener noreferrer"
+                >Contact me</a
+              >
+              to request a correction or removal.
+            </p>
+          </div>
+
+          <form id="check-form" class="check-form" novalidate>
+            <label class="sr-only" for="number">Mobile number to check</label>
+            <input
+              type="tel"
+              id="number"
+              class="number-input"
+              placeholder="09xx xxx xxxx"
+              autocomplete="off"
+              inputmode="tel"
+              aria-describedby="check-status"
+            />
+            <button type="submit" class="check-btn" id="check-btn">
+              Check number
+            </button>
+          </form>
+
+          <p class="status" id="check-status" role="status"></p>
+
+          <div class="card result" id="result" hidden aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
