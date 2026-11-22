@@ -219,9 +219,10 @@ function showResult(paragraphs, { withContact = false, proofHash = "" } = {}) {
   if (proofHash) {
     const p = document.createElement("p");
     const a = document.createElement("a");
-    a.style = `text-align: center; display: block; margin-top: 1em;`;
+    a.className = "proof-action";
     a.href = `proof.html?id=${encodeURIComponent(proofHash)}`;
     a.textContent = "View proof details and images";
+    p.style = "text-align: center; margin-top: 1em";
     p.append(a);
     resultEl.append(p);
   }

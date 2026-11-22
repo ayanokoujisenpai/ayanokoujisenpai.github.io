@@ -163,6 +163,53 @@ button:focus-visible,
   animation-delay: 0.5s;
 }
 
+.social-card {
+  text-align: center;
+}
+
+.social-card h2 {
+  margin-bottom: 0.75rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.social-link {
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.social-telegram {
+  background: #168ac4;
+}
+
+.social-telegram:hover {
+  background: #0f719f;
+}
+
+.social-facebook {
+  background: #1877f2;
+}
+
+.social-facebook:hover {
+  background: #125fc2;
+}
+
+.social-instagram {
+  background: #c13584;
+}
+
+.social-instagram:hover {
+  background: #a52d71;
+}
+
 .notice {
   font-size: 0.9rem;
 }
@@ -206,6 +253,25 @@ button:focus-visible,
   color: #111;
   font: inherit;
   cursor: pointer;
+}
+
+.check-btn:hover:not(:disabled) {
+  background: #b6d957;
+}
+
+.proof-action {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background: #ffc857;
+  color: #111;
+  text-decoration: none;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.proof-action:hover {
+  background: #f4a261;
 }
 
 .check-btn:disabled {
